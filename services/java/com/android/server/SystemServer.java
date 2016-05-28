@@ -670,7 +670,7 @@ public final class SystemServer {
                 }
             }
 
-            if (!disableNetwork) {
+            /*if (!disableNetwork) {
                 try {
                     Slog.i(TAG, "NetworkManagement Service");
                     networkManagement = NetworkManagementService.create(context);
@@ -678,7 +678,7 @@ public final class SystemServer {
                 } catch (Throwable e) {
                     reportWtf("starting NetworkManagement Service", e);
                 }
-            }
+            }*/
 
             if (!disableNonCoreServices) {
                 try {
@@ -869,12 +869,12 @@ public final class SystemServer {
             }
 
             if (!disableNonCoreServices) {
-                if (mPackageManager.hasSystemFeature(PackageManager.FEATURE_USB_HOST)
+                /*if (mPackageManager.hasSystemFeature(PackageManager.FEATURE_USB_HOST)
                         || mPackageManager.hasSystemFeature(
                                 PackageManager.FEATURE_USB_ACCESSORY)) {
                     // Manage USB host and device support
                     mSystemServiceManager.startService(USB_SERVICE_CLASS);
-                }
+                }*/
 
                 try {
                     Slog.i(TAG, "Serial Service");
